@@ -1,0 +1,119 @@
+.inputContainer {
+    width: 100%;
+    position: relative;
+    height: 50px;
+    border-radius: 8px;
+
+
+    &>* {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        padding: inherit;
+        margin: inherit;
+        height: inherit;
+        border-radius: inherit;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+    }
+
+    input {
+        width: inherit;
+        appearance: none;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        margin: inherit;
+        cursor: text;
+        padding-left: 5px;
+        padding-right: 32px;
+        background-color: white;
+        outline: none;
+    }
+
+    .hint {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0.35;
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid #dddddd00;
+        padding-left: 5px;
+    }
+
+    .action {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+        width: 32px;
+
+    }
+
+    .loading {
+        &>img {
+            width: 25px;
+            height: 25px;
+            animation: spin 1s linear infinite;
+        }
+    }
+
+    .close {
+        cursor: pointer;
+
+        &>img {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.search {
+    text-align: left;
+    width: 300px;
+}
+
+.dropdown {
+    border: 1px solid #ddd;
+    position: absolute;
+    width: inherit;
+    background-color: white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.item {
+    border: 1px solid #dddddd00;
+    padding: 8px 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    height: 42px;
+
+    &:hover {
+        background-color: #dddddde4;
+    }
+}
+
+.img {
+    width: 23px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
